@@ -1,0 +1,186 @@
+
+/******* SELECT **********/
+
+/* .ik_select { display:inline-block; *display:inline;zoom:1; position:relative; vertical-align:top;color:#493d32;font-family: 'PT Sans', sans-serif; height:25px; font-size:12px; background:#fff; cursor:pointer; padding:0 ; border:1px solid #84786d; border-radius:3px;}
+
+.ik_select
+  cursor: pointer
+  background-image: none
+  color: $clrGrey90
+  display: inline-block
+  font-size: 15px
+  line-height: 1.42857
+  font-weight: 400
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s
+  vertical-align: top
+  width: 100% !important
+  &_disabled
+    color: $clrGrey40
+    cursor: default
+    .ik_select
+      &_link
+        background: #fbfdfd
+        &_text
+          color: $clrGrey40
+  &_link
+    overflow: hidden
+    padding: 11px 12px
+    height: 45px
+    white-space: nowrap
+    position: relative
+    border-radius: 4px
+    background-color: #fff
+    border: 1px solid $clrGrey40
+    z-index: 99
+
+    &_text
+      padding-right: 15px
+      color: $clrGrey90
+      background: url(../img/arr-select.png)  100% 50% no-repeat
+      text-overflow: ellipsis
+      overflow: hidden
+      white-space: nowrap
+
+  &_dropdown
+    font-size: 15px
+    color: $clrGrey90
+    font-weight: 300
+    margin-top: -1px
+    top: 100% !important
+    left: 0 !important
+    width: 100% !important
+
+    ul
+      display: block
+      padding: 18px 0
+      position: relative
+      left: 0
+      li
+        margin: 0
+        list-style: none
+        display: block
+        padding: 6px 18px
+        &:hover
+          background: $clrGrey20
+        span
+          display: block
+  select
+    z-index: 4
+    width: 100%
+  &_list
+    left: 0
+    top: 0
+    margin: 0 1px 0 0
+    background: #fff
+    border-radius: 4px
+    border: 1px solid $clrGrey40
+    ul
+      margin: 0
+      padding: 0
+      display: block
+      margin-right: 1px
+    li
+      padding: 0
+      position: relative
+      cursor: pointer
+      list-style: none
+      margin: 0
+      &:hover
+        color: #1c6cd5
+    &_inner
+      max-height: 200px
+      overflow: auto
+
+.b-input-browse
+  display: block
+  overflow: hidden
+  position: relative
+  cursor: pointer
+  width: 100%
+  .input-browse
+    opacity: 0
+    position: absolute
+    top: 0
+    right: 0
+    width: 500px
+    height: 200px
+    z-index: 1
+    cursor: pointer
+    &:hover + .input-browse__label
+        border-color: $clrPrimaryHover
+    &__label
+      padding: 12px
+      font-size: 15px
+      color:  $clrGrey50
+      background: #fff
+      border-radius: 4px
+      border: 1px solid $clrGrey40
+      width: 100%
+
+  .svg-icon
+    position: absolute
+    top: 15px
+    right: 10px
+
+input.datepicker
+  background: url(../img/calendar-gray.svg) #fff calc(100% - 10px) 50% no-repeat
+input.inp_date
+  background: url(../img/calendar-gray.svg) #fff calc(100% - 10px) 50% no-repeat
+input.datepicker-range
+  background: url(../img/calendar-gray.svg) #fff 16px 50% no-repeat
+  padding-left: 44px
+input.datepicker-range.--gray-90
+  background: url(../img/calendar-gray90.svg) #fff 16px 50% no-repeat
+  color: $clrGrey90
+.form-form
+  &__row
+    padding-bottom: 18px
+    display: flex
+    flex-wrap: wrap
+    &.pb-32
+      padding-bottom: 32px
+    &.pb-40
+      padding-bottom: 40px
+  .label
+    padding-bottom: 4px
+    display: block
+    font-weight: 500
+    width: 100%
+
+  .text-captcha
+    color: $clrGrey90
+    padding-bottom: 9px
+  .btn
+    font-size: 15px
+    font-weight: 400
+
+  &__btns
+    padding-top: 16px
+    margin-left: -10px
+    margin-right: -10px
+    display: flex
+  &__col2
+    max-width: 50%
+    min-width: 50%
+    padding: 0 10px
+  .form-item
+
+    & + .form-item
+      padding-top: 18px
+  .b-subeckbox
+    margin-top: 12px
+
+.select2
+  width: 100%
+.select2-container
+  .select2-selection--single
+    height: auto
+    .select2-selection__rendered
+      display: flex
+      height: 43px
+      align-items: center
+    .select2-selection__arrow
+      height: 100%
+  .select2-results__options
+    li
+      width: 100%

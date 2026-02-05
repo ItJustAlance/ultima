@@ -1,0 +1,28 @@
+<%
+var data = {
+title: "Заголовок сайта",
+copyright: "itJustAlance",
+bodyClass: ""
+};
+
+<!--var mobileFooter = _.template(require('../includes/mobile-footer.html'))(data);-->
+<!--var mobileMenu = _.template(require('../includes/mobile-menu.html'))(data);-->
+
+<!--var footerHtml = _.template(require('../includes/footer.html'))({-->
+<!--...data,-->
+<!--mobileFooter,-->
+<!--mobileMenu-->
+<!--});-->
+
+
+%>
+<%= _.template(require('../includes/header.html'))(data) %>
+
+<div class="container">
+  <div class="lvl1">
+  
+  </div>
+  
+</div>
+
+<-- %= footerHtml % -->

@@ -1,0 +1,76 @@
+@media print {
+  .header,
+  .footer,
+  .cabinet-info__bottom,
+  .cabinet-header__right,
+  .cabinet-detail-aside,
+  .cabinet-header__right .b-btns,
+  .cabinet-detail__bottom-btns,
+  .b-detail-info__col-right,
+  .--md-hidden,
+  .covering-letter__header .right-btns,
+  .admin-panel {
+    display: none !important;
+  }
+  .over {max-width: 1000px;}
+  .all {max-width: 1000px !important; width: 800px !important}
+  a[href]:after { content: none; }
+  /* Обнулить поля на странице */
+  @page {
+    size: Letter portrait;
+    margin: 1em;
+  }
+  ul, img {
+    page-break-inside: avoid;
+  }
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body, .cabinet-info__label {
+    font-size: 13px;
+  }
+  h2, h3 {
+    page-break-after: avoid;
+  }
+  .cabinet-info__text {
+    font-size: 16px;
+  }
+  .h2-title {
+    font-size: 24px;
+    page-break-after: avoid;
+  }
+  .h3-title {
+    font-size: 20px;
+    page-break-after: avoid;
+  }
+  .cabinet-info__section {
+    padding: 10px 0;
+
+
+  }
+  .cabinet-info__lg-2 {
+
+
+  }
+  .cabinet-info__row + .cabinet-info__row {
+    padding-top: 8px;
+  }
+  .cabinet-info__row.--x2 {
+    padding-bottom: 18px;
+  }
+  .cabinet-info__row {
+
+    flex-wrap: wrap;
+
+  }
+  .cabinet-info__lg-2 {
+    width: 100%;
+  }
+  .cabinet-info__section .h2-title--section {
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}

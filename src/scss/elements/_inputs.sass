@@ -1,0 +1,142 @@
+.input
+  padding: 12px
+  font-size: 15px
+  color: #342615
+  background: #FFE9CF
+  border-radius: 10px
+  border: none
+  width: 100%
+  
+  &.disabled, &[disabled]
+    border-color: $clrGrey40
+    background: $clrGrey20
+    color: $clrGrey60
+    
+    
+.textarea
+  padding: 12px
+  font-size: 15px
+  color:  $clrGrey50
+  background: #fff
+  border-radius: 4px
+  border: 1px solid $clrGrey40
+  width: 100%
+  &:hover
+    border-color: $clrPrimaryHover
+  &:focus
+    border-color: $clrPrimaryFocus
+  &.inp-error
+    border-color: $clrDangerMain
+  &.inp-succ
+    border-color: $clrSuccessMain
+  &.disabled, &[disabled]
+    border-color: $clrGrey40
+    background: $clrGrey20
+    color: $clrGrey60
+
+.b-checkbox
+  position: relative
+  display: inline-block
+  vertical-align: top
+  input
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
+    opacity: 0
+    &:checked + .b-checkbox__label
+      .checked
+        .svg-icon
+          opacity: 1
+  &__text
+    display: block
+  &__label
+    position: relative
+    cursor: pointer
+    padding-left: 28px
+    padding-top: 1px
+    display: block
+    font-size: 20px
+    a
+      text-decoration: underline
+      &:hover
+        text-decoration: none
+    .checked
+      width: 23px
+      height: 23px
+      border-radius: 6px
+      background: #FFE9CF80
+      border: 1px solid rgba(252, 231, 205, 0)
+      position: absolute
+      top: 4px
+      left: 0
+      .svg-icon
+        fill: #fff
+        opacity: 0
+        position: absolute
+        top: 3px
+        left: 3px
+  &:hover
+    .b-checkbox
+      &__label
+        .checked
+          border-color: #624F37
+
+.b-radio
+  position: relative
+  display: inline-block
+  vertical-align: top
+  input
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
+    opacity: 0
+    &:checked + .b-radio__label
+      .checked
+        border-color: #000
+        &:after
+          display: block
+
+  &__label
+    position: relative
+    cursor: pointer
+    padding-left: 28px
+    padding-top: 1px
+    display: flex
+
+    a
+      text-decoration: underline
+      &:hover
+        text-decoration: none
+    .checked
+      border: 1px solid $clrGrey50
+      width: 20px
+      height: 20px
+      border-radius: 50%
+      background: #fff
+      position: absolute
+      top: 0
+      left: 0
+      &:after
+        content: ""
+        background: #000
+        top: 3px
+        bottom: 3px
+        right: 3px
+        left: 3px
+        border-radius: 50%
+        display: none
+        position: absolute
+  &:hover
+    .b-radio
+      &__label
+        .checked
+          border-color: $clrPrimaryHover
+  &--blue
+    .b-radio
+      &__label
+        .checked
+          border-color: $clrPrimaryMain
+          &:after
+            background: $clrPrimaryMain

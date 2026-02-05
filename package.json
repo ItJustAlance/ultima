@@ -1,0 +1,37 @@
+{
+  "name": "packaje-site-webpack-svg-html-include",
+  "version": "1.0.0",
+  "description": "HTML template svg inline",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "watch": "webpack --mode development --watch",
+    "start": "webpack serve --no-client-overlay-warnings --open",
+    "build": "webpack --mode production && prettier --print-width=120 --parser html --write dist/*.html"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.8",
+    "jquery": "^3.7.1"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^13.0.1",
+    "css-loader": "^7.1.2",
+    "css-minimizer-webpack-plugin": "^7.0.2",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.6.4",
+    "mini-css-extract-plugin": "^2.9.4",
+    "prettier": "^3.6.2",
+    "raw-loader": "^4.0.2",
+    "sass": "^1.93.2",
+    "sass-loader": "^16.0.5",
+    "svg-sprite-loader": "^6.0.11",
+    "svg-spritemap-webpack-plugin": "^4.3.2",
+    "svgo": "^2.5.0",
+    "svgo-loader": "^4.0.0",
+    "terser-webpack-plugin": "^5.3.14",
+    "webpack": "^5.101.3",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  }
+}

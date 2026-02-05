@@ -1,0 +1,64 @@
+<%
+var data = {
+title: "Заголовок сайта",
+copyright: "itJustAlance",
+bodyClass: "bg-reg"
+};
+
+<!--var mobileFooter = _.template(require('../includes/mobile-footer.html'))(data);-->
+<!--var mobileMenu = _.template(require('../includes/mobile-menu.html'))(data);-->
+
+<!--var footerHtml = _.template(require('../includes/footer.html'))({-->
+<!--...data,-->
+<!--mobileFooter,-->
+<!--mobileMenu-->
+<!--});-->
+
+
+%>
+<%= _.template(require('../includes/header.html'))(data) %>
+
+<div class="container">
+  <div class="page-reg">
+    <div class="page-reg-h1">Регистрация</div>
+    <div class="form-reg">
+      <div class="form-reg__row">
+        <div class="form-reg__label">Логин</div>
+        <div class="form-reg__input"><input type="text" class="input"></div>
+      </div>
+      <div class="form-reg__row">
+        <div class="form-reg__label">Email</div>
+        <div class="form-reg__input"><input type="text" class="input"></div>
+      </div>
+      <div class="form-reg__row">
+        <div class="form-reg__label">Пароль</div>
+        <div class="form-reg__input"><input type="text" class="input"></div>
+      </div>
+      <div class="form-reg__row">
+        <div class="form-reg__label">Повторить пароль</div>
+        <div class="form-reg__input"><input type="text" class="input"></div>
+      </div>
+      <div class="form-reg__row">
+        <div class="b-checkbox">
+          <input type="checkbox" id="sogl1">
+          <label class="b-checkbox__label" for="sogl1">
+            <span class="checked">
+              <svg class="svg-icon svg-icon--check">
+                <use xlink:href="#icon-check"></use>
+              </svg>
+            </span>
+            Согласен с Правилами сервера и Политикой конфиденциальности</label>
+        </div>
+      </div>
+      <div class="form-reg__row --center">
+        <img src="img/captcha.png" alt="">
+      </div>
+      <div class="form-reg__row --center">
+        <a href="#" class="btn-reg">регистрация</a>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<-- %= footerHtml % -->

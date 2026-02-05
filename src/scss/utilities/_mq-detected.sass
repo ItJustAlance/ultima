@@ -1,0 +1,37 @@
+#mq-detect
+  #mq-full
+    display: none
+    /* для экранов 1440 и больше */
+    @media (min-width: $hd + 1+ "px")
+      display: block
+  #mq-hd
+    display: none
+    /* для экранов 1200-1440 и меньше */
+    @media (min-width: $xl + 1+ "px") and (max-width: $hd+ "px")
+      display: block
+  #mq-xl
+    display: none
+    /* для экранов 1000-1200 и меньше */
+    @media (min-width: $lg + 1+ "px") and (max-width: $xl+ "px")
+      display: block
+  #mq-lg
+    display: none
+    /* для экранов 768-1000 и меньше */
+    @media (min-width: $md + 1+ "px") and (max-width: $lg+ "px")
+      display: block
+  #mq-md
+    display: none
+    /* для экранов 600-768 и меньше */
+    @media (min-width: $sm + 1+ "px") and (max-width: $md+ "px")
+      display: block
+  #mq-sm
+    display: none
+    /* для экранов 450-600 и меньше */
+    @media (min-width: $xs + 1+ "px") and (max-width: $sm+ "px")
+      display: block
+  #mq-xs
+    display: none
+    /* для экранов 450 и меньше */
+    @media (max-width: $xs+ "px")
+      display: block
+    

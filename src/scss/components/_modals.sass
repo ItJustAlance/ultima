@@ -1,0 +1,386 @@
+.just-modal
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 101
+  display: none
+  text-align: center
+  background: rgba(0,0,0,0)
+  backdrop-filter: blur(1px)
+  padding: 0
+  font-size: 16px
+  overflow: auto
+  &.modal-form-normal
+    .just-modal
+      &__container
+        max-width: 395px
+      &__body
+        width: 100%
+
+
+  &.open
+    display: block !important
+    opacity: 1
+    background: rgba(0,0,0,0.12)
+    animation: show-over .3s linear 0s 1
+    .just-modal
+      &__overlay
+        opacity: 1
+
+  &.in
+    .just-modal
+      &__wrapper
+        opacity: 1
+        top: 0
+        animation: show-wrapper .3s linear 0s 1
+
+  &.mobile-modal-bottom
+    +r(md)
+      padding: 16px 0 0
+      align-items: flex-end
+      .just-modal
+        &__wrapper
+          width: 100%
+          max-width: 600px
+          top: auto
+          padding: 0
+          margin: 12px 0 0
+          align-items: flex-end
+          &:before
+            display: none
+        &__body
+          width: 100%
+          border-radius: 12px 12px 0 0
+
+  &.in
+    .just-modal
+      &__wrapper
+        +r(md)
+          opacity: 1
+          bottom: 0
+          top: auto
+          animation: show-wrapper-bottom-top .3s linear 0s 1
+
+
+  &__overlay
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 0
+    background: rgba(0,0,0,0)
+    opacity: 0
+    transition: all 0.3s ease
+
+  &__wrapper
+    max-width: 100vw
+    text-align: left
+    min-height: calc(100% - 3.5rem)
+    padding: 20px
+    align-items: center
+    justify-content: center
+    position: relative
+    display: flex
+    margin: 0 auto
+    top: -100vh
+    opacity: 0
+    +r($md)
+      padding: 20px 0
+
+    &:before
+      display: block
+      content: ""
+      height: calc(100vh - 3.5rem)
+      height: -webkit-min-content
+      height: -moz-min-content
+      height: min-content
+  &__container
+    position: relative
+    max-width: 480px
+    width: 100%
+  &__body
+    width: 100%
+    padding: 50px 40px 32px
+    background: $baseBg
+    box-shadow: -2px 2px 14px 0px rgba(27, 27, 27, 0.10)
+    border-radius: 16px
+    position: relative
+    font-size: 15px
+    +r($sm)
+      padding-left: 12px
+      padding-right: 12px
+  &__header
+    padding-bottom: 20px
+  &-title
+    text-transform: uppercase
+    padding-bottom: 12px
+    padding-top: 32px
+
+  &-subtitle
+    padding-bottom: 12px
+  &__close
+    position: absolute
+    top: 24px
+    right: 24px
+    background: none
+    cursor: pointer
+    svg
+      width: 24px
+      height: 24px
+      fill: rgba(0, 0, 39, 0.38)
+    &:hover
+      svg
+        fill: #3478F6
+
+  &-form
+    &__row
+      padding-bottom: 18px
+      &.pb-32
+        padding-bottom: 32px
+    .label
+      padding-bottom: 4px
+      display: block
+      font-weight: 500
+
+    .text-captcha
+      color: $clrGrey90
+      padding-bottom: 9px
+      opacity: .6
+    .btn
+      font-size: 15px
+      font-weight: 400
+
+    &__btns
+      padding-top: 16px
+      margin-left: -10px
+      margin-right: -10px
+      display: flex
+    &__col2
+      max-width: 50%
+      min-width: 50%
+      padding: 0 10px
+
+
+
+.modal-covering-letter
+  .just-modal
+    &__body
+      padding: 40px 32px
+      +r($sm)
+        padding: 32px 12px
+  .--covering-letter
+    min-height: 205px
+
+
+.modal-big
+  .just-modal
+    &__container
+      max-width: 860px
+    &__body
+      padding-top: 80px
+      +r($sm)
+        padding: 54px 12px 32px
+.modal-middle
+  .just-modal
+    &__container
+      max-width: 630px
+    &__body
+      padding: 18px 32px
+      +r($sm)
+        padding: 18px 12px
+
+.modal-anons
+  .anons-img
+    margin-bottom: 32px
+    img
+      border-radius: 16px
+  .anons-date
+    padding-bottom: 12px
+    color: $clrGrey40
+  .anons-title
+    padding-bottom: 12px
+  .anons-text
+
+
+@keyframes show-over
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+
+@keyframes show-wrapper
+  0%
+    top: -100vh
+  100%
+    top: 0
+
+@keyframes show-wrapper-bottom-top
+  0%
+    bottom: -100vh
+
+  100%
+    bottom: 0
+
+@keyframes show-wrapper-right-left
+  0%
+    right: -101vw
+
+  100%
+    right: 0
+
+
+
+
+// модалка выезжает справа
+
+.just-modal--right
+  .just-modal
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 101
+    display: none
+    text-align: center
+    background: 0
+    padding: 0
+    font-size: 14px
+    overflow: hidden
+
+    &.open
+      display: block !important
+      opacity: 1
+      background: rgba(0, 62, 91, 0.40)
+      animation: show-over .3s linear 0s 1
+      .just-modal
+        &__overlay
+          opacity: 1
+
+    &.in
+      .just-modal
+        &__wrapper
+          opacity: 1
+          right: 0
+          animation: show-wrapper-right-left .3s linear 0s 1
+    &__overlay
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      z-index: 0
+      background: rgba(0,0,0,0)
+      opacity: 0
+      transition: all 0.3s ease
+
+    &__wrapper
+      max-width: 630px
+      width: 70%
+      text-align: left
+      height: 100vh
+      padding: 0
+      align-items: center
+      justify-content: center
+      position: relative
+      display: flex
+      margin: 0 0 0 auto
+      right: -100vw
+      opacity: 0
+
+    &__container
+      width: 100%
+      height: 100%
+    &__body
+      width: 100%
+      padding: 80px 40px 40px
+      background: #fff
+      position: relative
+      height: 100%
+    &__close
+      &-wrapper
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        background: $clrGrey20
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        padding: 8px
+      svg
+        fill: rgba(0, 0, 39, 0.38)
+      &:hover
+        svg
+          fill: $clrGrey90
+
+
+.modal-data
+  &-wrapper
+    display: flex
+    overflow: hidden
+    position: relative
+    flex-direction: column
+    height: 100%
+  &-header
+    &__title
+      font-size: 28px
+      padding-bottom: 32px
+      color: $clrGrey90
+      font-weight: 500
+  &-content
+    overflow: auto
+    flex: 1 1 auto
+  &-row
+    padding-bottom: 32px
+  &-subtitle
+    font-weight: 500
+    padding-bottom: 12px
+  &-comment
+    background: $clrGrey20
+    font-size: 16px
+    font-weight: 300
+    padding: 24px
+    margin-bottom: 32px
+  &-footer
+    &__btns
+      display: flex
+      gap: 32px
+      padding-top: 32px
+      justify-content: flex-end
+
+
+.modal-review
+  .just-modal__body
+    background: #fff
+.review-list
+  overflow: auto
+  max-height: 80vh
+  margin: 40px -20px 0 0
+  padding-right: 20px
+.review-item
+  background: $baseBg
+  margin-bottom: 18px
+  border-radius: 16px
+  padding: 24px 18px
+  .name
+    font-size: 18px
+    font-weight: 600
+  .text-gray
+    color: $clrGrey60
+  &__header
+    display: flex
+    padding-bottom: 12px
+  &__title
+    font-size: 18px
+    font-weight: 600
+  &__date
+    margin-left: auto
+    color: $clrGrey60
+  &__text
+    padding-bottom: 18px
+  &__bottom

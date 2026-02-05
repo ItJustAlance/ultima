@@ -1,0 +1,77 @@
+.header
+  width: 100%
+  display: flex
+  height: 87px
+  background: $baseBg
+  position: relative
+  z-index: 2
+  
+  box-shadow: 0px 4px 21.4px 0px #A3763F3D
+  border-bottom: 1px solid #D7AA73
+  &-bg
+    width: 102vw
+    height: 87px
+    position: absolute
+    top: 30px
+    left: calc(50% - 51vw)
+    overflow: hidden
+    &:before
+      background: linear-gradient(4.4deg, #1A2166 -31.59%, #0F0201 127%)
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 220px
+      content: ""
+  .nav
+    position: relative
+    z-index: 2
+    &-list
+      font-size: 25px
+      display: flex
+      gap: 18px
+      margin: 0
+      padding: 0
+      a
+        color: #FFE8CC
+  .logo
+    position: absolute
+    top: -31px
+    left: calc(50% - 121px)
+    width: 242px
+    height: 220px
+    padding: 50px 0 0
+    text-align: center
+    background: linear-gradient(4.4deg, #1A2166 -31.59%, #0F0201 127%)
+    border-radius: 0 0 50% 50%
+    box-shadow: 0px 4px 21.4px 0px #A3763F3D
+    border-bottom: 1px solid #D7AA73
+    
+    &-link
+      width: 137px
+      display: inline-block
+      position: relative
+      z-index: 1
+  &-right
+    margin-left: auto
+    position: relative
+    z-index: 2
+  .btn-login
+    color: #FFE8CC
+    padding: 10px 40px 14px
+    border-radius: 10px
+    border: 1px solid #FFD5A3
+    display: inline-block
+    vertical-align: top
+    font-size: 25px
+    line-height: 1
+    &:hover
+      background: #FFD5A3
+      color: #1A2166
+  .all
+    display: flex
+    justify-content: center
+    position: relative
+    align-items: center
+ 
+  
