@@ -13,7 +13,14 @@
   padding-top: 160px
   background: url(../img/paper.svg) 50% -60px no-repeat
   padding-bottom: 70px
-
+  +r($lg)
+    background: url(../img/paper-768.svg) 50% -60px no-repeat
+    padding-top: 60px
+  +r($sm)
+    padding-top: 100px
+    margin-bottom: -40px
+    padding-bottom: 100px
+    
   &-h1
     text-align: center
     font-family: 'VinqueRg', sans-serif
@@ -25,7 +32,11 @@
     color: transparent
     text-transform: uppercase
     margin-bottom: 28px
-
+    +r($lg)
+      font-size: 48px
+    +r($sm)
+      font-size: 24px
+    
 .btn-reg
   display: inline-block
   vertical-align: top
@@ -37,6 +48,8 @@
   text-transform: uppercase
   border-radius: 20px
   color: #FFD5A3
+  +r($lg)
+    font-size: 24px
   &:hover
     color: #d8b893
     background: linear-gradient(332.65deg, #624F37 -33.48%, #624F37 147.99%)
@@ -53,7 +66,17 @@
   font-size: 28px
   padding: 64px 42px 0
   height: 865px
-  
+  +r($lg)
+    font-size: 20px
+    max-width: 550px
+    background-size: contain
+    gap: 14px
+  +r($sm)
+    background: none
+    height: auto
+    padding-top: 25px
+    font-size: 16px
+    
   &__label
     margin-bottom: 8px
   &__row

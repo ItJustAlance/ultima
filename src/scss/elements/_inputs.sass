@@ -6,7 +6,9 @@
   border-radius: 10px
   border: none
   width: 100%
-  
+  +r($sm)
+    padding: 8px
+    
   &.disabled, &[disabled]
     border-color: $clrGrey40
     background: $clrGrey20
@@ -57,6 +59,8 @@
     padding-top: 1px
     display: block
     font-size: 20px
+    +r($sm)
+      font-size: 16px
     a
       text-decoration: underline
       &:hover

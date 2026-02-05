@@ -8,6 +8,9 @@
   
   box-shadow: 0px 4px 21.4px 0px #A3763F3D
   border-bottom: 1px solid #D7AA73
+  
+  .all
+    overflow: unset
   &-bg
     width: 102vw
     height: 87px
@@ -26,6 +29,8 @@
   .nav
     position: relative
     z-index: 2
+    +r($hd)
+      display: none
     &-list
       font-size: 25px
       display: flex
@@ -46,16 +51,27 @@
     border-radius: 0 0 50% 50%
     box-shadow: 0px 4px 21.4px 0px #A3763F3D
     border-bottom: 1px solid #D7AA73
-    
+    +r($lg)
+      width: 200px
+      height: 180px
+      left: calc(50% - 100px)
     &-link
       width: 137px
       display: inline-block
       position: relative
       z-index: 1
+      +r($lg)
+        width: 120px
+        
   &-right
     margin-left: auto
     position: relative
     z-index: 2
+    +r($hd)
+      margin-left: 0
+      margin-right: auto
+    +r($sm)
+      display: none
   .btn-login
     color: #FFE8CC
     padding: 10px 40px 14px
@@ -65,6 +81,8 @@
     vertical-align: top
     font-size: 25px
     line-height: 1
+    +r($md)
+      padding: 8px 20px 10px
     &:hover
       background: #FFD5A3
       color: #1A2166
@@ -74,4 +92,78 @@
     position: relative
     align-items: center
  
+  .nav-burger
+    position: relative
+    display: none
+    +r($hd)
+      display: block
+    +r($sm)
+      margin-left: auto
+      
+    .svg-icon
+      fill: #fff
+      width: 32px
+      height: 32px
+
+      
+.modal-nav-burger
+  &__wrapper
+    box-shadow: 0px 4px 53.9px 0px #000000D1
+    background: linear-gradient(0.31deg, #08051E 23.94%, #B5A086 253.23%)
+    overflow: auto
+    text-align: left
+    padding: 0 50px 50px
+    height: 100%
+    +r($sm)
+      padding: 0 25px 25px
+  &__close
+    position: absolute
+    right: 30px
+    top: 30px
+    cursor: pointer
   
+  &__logo
+    width: 56px
+    margin-top: 20px
+    img
+      width: 56px
+  &__header
+    margin-bottom: 60px
+    
+  .btn-login
+    color: $clrPrimaryMain
+    padding: 10px 40px 14px
+    border-radius: 10px
+    font-weight: 400
+    border: 1px solid #FFD5A3
+    display: inline-block
+    vertical-align: top
+    font-size: 25px
+    line-height: 1
+    margin-bottom: 24px
+    +r($sm)
+      font-size: 16px
+      padding: 8px 20px 10px
+    &:hover
+      background: #FFD5A3
+      color: #1A2166
+
+      
+  &-nav
+    font-size: 32px
+    font-weight: 300
+    display: flex
+    flex-direction: column
+    margin: 0 0 60px
+    padding: 0
+    list-style: none
+    gap: 24px
+    +r($sm)
+      font-size: 24px
+      margin-bottom: 30px
+    li
+      display: block
+
+  &-socs
+    display: flex
+    gap: 15px
