@@ -1,4 +1,5 @@
 import "bootstrap";
+
 import "./static-js";
 
 // Автоматически импортировать ВСЕ SVG из src/icons

@@ -1,9 +1,171 @@
 .lvl1
   background: url(../img/bg_1block.jpg) 50% 0 no-repeat
-  background-size: 1920px auto
-  height: 1200px
-
+  background-size: cover
+  height: 1100px
+  margin-bottom: -100px
+  @media (max-width: 1500px)
+    padding: 0 50px
+    max-width: 100vw
+  +r($xl)
+    padding: 0
+  +r($lg)
+    height: auto
+    padding-bottom: 180px
   
+  .slider-main
+    margin: 0 -250px
+    position: relative
+    padding-top: 20px
+    @media (max-width: 2000px)
+      margin: 0 -100px
+      padding-top: 40px
+    @media (max-width: 1600px)
+      margin: 0 60px
+    @media (max-width: 1500px)
+      margin: 0
+      max-width: 100%
+    +r($xl)
+      margin: 0 -15px
+      max-width: calc(100% + 30px)
+      
+    .slick-track, .slick-list
+      padding-bottom: 80px !important
+      +r($lg)
+        padding-bottom: 40px !important
+      // overflow: unset
+    .slick-arrow
+      position: absolute
+      top: calc(50% - 100px)
+      background: url(../img/arr-left.png) 50% 0 no-repeat
+      width: 67px
+      height: 65px
+      z-index: 5
+      overflow: hidden
+      text-align: left
+      text-indent: -999em
+      left: -60px
+      +r($xl)
+        left: 5px
+      +r($sm)
+        width: 40px
+        height: 40px
+        background-size: contain
+        top: 40%
+      &.slick-next
+        left: 100%
+        transform: rotate(180deg)
+        +r($xl)
+          left: auto
+          right: 5px
+          
+  .slick-slide
+    display: flex
+    justify-content: center
+    transition: all linear .3s
+    transform: scale(0.8)
+    // opacity: 0
+    +r($xl)
+      margin: 0 -100px
+      opacity: 0
+      .info-game-box
+        max-width: 500px
+    +r($sm)
+      margin: 0
+    &.slick-active
+      opacity: 1
+      
+      
+    &.slick-current, &.slick-center
+      z-index: 3
+      transform: scale(1)
+      position: relative
+      .info-game-box
+        background: linear-gradient(135deg,  #fee3c1 0%, #fed29c 100%)
+        color: #342615
+
+        &:before
+          background: #fed7a6
+        &__title
+          background: linear-gradient(180deg, #6E5B43 0%, #08051E 100%)
+          -webkit-background-clip: text
+          -webkit-text-fill-color: transparent
+          background-clip: text
+          color: transparent
+          text-transform: uppercase
+          
+.info-game-box
+  text-align: center
+  background: #201c3c
+  padding: 110px 35px 0
+  width: 799px
+  height: 844px
+  color: #FFEBD3
+  border-radius: 72px
+  box-shadow: 2px 0 13px rgba(0,0,0, .8)
+  @media (max-width: 2000px)
+    width: 720px
+    height: auto
+    padding-bottom: 90px
+  @media (max-width: 1600px)
+    width: auto
+    min-width: 100%
+    margin: 0 -60px
+  @media (max-width: 1500px)
+    margin: 0 -20px
+  +r($sm)
+    padding: 40px 20px 40px
+    border-radius: 40px
+  &:before
+    content: ""
+    width: 140px
+    height: 80px
+    border-radius: 140px / 80px
+    position: absolute
+    top: calc(100% - 50px)
+    left: calc(50% - 70px)
+    background: #201c3c
+
+  &__title
+    background: linear-gradient(180deg, #FFD5A3 0%, #6E5B43 100%)
+    // box-shadow: 0px 6px 5px 0px #2A0B0A21 inset
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+    color: transparent
+    text-transform: uppercase
+    font-size: 48px
+    font-family: 'VinqueRg', sans-serif
+    margin-bottom: 18px
+    @media (max-width: 2000px)
+      font-size: 44px
+    @media (max-width: 1600px)
+      font-size: 34px
+    +r($hd)
+      font-size: 30px
+    +r($xl)
+      font-size: 28px
+    +r($lg)
+      font-size: 24px
+    +r($sm)
+      font-size: 21px
+  &__text
+    font-size: 32px
+    height: 120px
+    overflow: hidden
+    @media (max-width: 2000px)
+      font-size: 28px
+    @media (max-width: 1600px)
+      font-size: 22px
+    +r($lg)
+      font-size: 18px
+  &__img
+    width: 100%
+    max-width: 580px
+    margin: 0 auto
+    position: relative
+    +r($sm)
+      border-radius: 30px
+      overflow: hidden
   
 .bg-reg
   background: url(../img/bg_1block.jpg) 50% 0 no-repeat
@@ -37,7 +199,8 @@
       font-size: 48px
     +r($sm)
       font-size: 24px
-  
+
+      
   &-success
     padding-top: 200px
     margin: 0 auto
@@ -97,3 +260,473 @@
       
   .b-checkbox
     font-size: 20px
+
+.section-2
+  background: url(../img/lvl2-bg.png) 50% 0 no-repeat
+  background-size: cover
+  height: 1100px
+  border-radius: 0 0 50px 50px
+  margin-bottom: -80px
+  position: relative
+  +r($xl)
+    height: auto
+    padding-bottom: 80px
+    max-width: 100%
+  
+.lvl2
+  box-shadow: 0px 4px 53.9px 0px #000000D1
+  background: linear-gradient(353.47deg, #08051E 30.48%, #AA9D8C 180.17%)
+  border-radius: 70px
+  max-width: 1440px
+  width: 100%
+  margin: 0px auto 0
+  position: relative
+  top: -70px
+  
+.statistic-box
+  display: flex
+  justify-content: space-between
+  padding: 70px 20px
+  gap: 24px
+  +r($lg)
+    padding: 40px 20px
+    gap: 16px
+    flex-wrap: wrap
+    +r($sm)
+      justify-content: center
+  &__item
+    background: linear-gradient(180deg, #FFD39D 0%, #A3763F 100%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+    color: transparent
+    font-size: 24px
+    font-weight: 500
+    text-align: center
+    +r($hd)
+      font-size: 20px
+    +r($xl)
+      font-size: 16px
+    +r($lg)
+      width: 16%
+    +r($sm)
+      width: 45%
+  .txt
+    text-decoration: underline
+    text-transform: uppercase
+  .num
+    font-size: 85px
+    font-weight: bold
+    line-height: 1
+    background: linear-gradient(180deg, #FFD39D 0%, #A3763F 100%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+    color: transparent
+    margin-bottom: 12px
+    text-decoration: none
+    +r($hd)
+      font-size: 70px
+    +r($xl)
+      font-size: 50px
+    +r($lg)
+      font-size: 28px
+
+.lvl3
+  .all
+    display: flex
+    
+  &-img
+    position: absolute
+    top: 0
+    left: calc(100% + 40px)
+    width: 900px
+    +r($xl)
+      width: 500px
+    +r($sm)
+      position: relative
+      top: 0
+      left: 0
+      width: auto
+      margin-right: -15px
+      margin-top: 30px
+    img
+      width: 900px
+      +r($xl)
+        width: 500px
+  &-description
+    max-width: 900px
+    position: relative
+    +r($xl)
+      max-width: 60%
+    +r($sm)
+      max-width: 100%
+    .title
+      background: linear-gradient(137.08deg, #FFE8CC -15.95%, #6E5B43 78.96%)
+      font-size: 83px
+      font-weight: bold
+      line-height: 1
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      background-clip: text
+      color: transparent
+      margin-bottom: 60px
+      font-family: 'VinqueRg', sans-serif
+      text-transform: uppercase
+      +r($hd)
+        font-size: 70px
+      +r($xl)
+        font-size: 50px
+      +r($lg)
+        font-size: 42px
+      +r($sm)
+        font-size: 38px
+    .text
+      font-size: 36px
+      color: #FFEBD3
+      line-height: 1.2
+      margin-bottom: 60px
+      +r($xl)
+        font-size: 24px
+      +r($lg)
+        font-size: 18px
+    .b-btn
+      .btn
+        background: linear-gradient(160.34deg, #FFE8CC -3.43%, #FFD39D 71.5%, #FFD39D 71.51%, #FFE8CC 104.25%)
+        padding: 25px
+        border: none
+        cursor: pointer
+        border-radius: 20px
+        &:hover
+          background: linear-gradient(160.34deg, #FFD39D -3.43%, #FFD39D 71.5%, #FFD39D 71.51%, #FFD39D 104.25%)
+
+        &__label
+          background: linear-gradient(180deg, #6E5B43 0%, #08051E 100%)
+          font-size: 31px
+          -webkit-background-clip: text
+          -webkit-text-fill-color: transparent
+          background-clip: text
+          color: transparent
+          font-family: 'VinqueRg', sans-serif
+          text-transform: uppercase
+          margin-right: 5px
+          +r($xl)
+            font-size: 21px
+          +r($sm)
+            font-size: 18px
+          
+.section-3
+  background: url(../img/bg-4.png) 50% 0 no-repeat
+  background-size: cover
+  min-height: 2400px
+  padding-top: 100px
+  padding-bottom: 140px
+  margin-bottom: -100px
+  @media(max-width: 1500px)
+    min-height: auto
+    
+  
+.lvl4
+  margin-bottom: 125px
+  &__header
+    display: flex
+    align-items: flex-end
+    margin-bottom: 25px
+    +r($sm)
+      flex-wrap: wrap
+  &-title
+    background: linear-gradient(137.08deg, #6E5B43 -15.95%, #08051E 78.96%)
+    font-size: 83px
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+    color: transparent
+    font-family: 'VinqueRg', sans-serif
+    text-transform: uppercase
+    max-width: 50%
+    +r($hd)
+      font-size: 70px
+    +r($xl)
+      font-size: 50px
+    +r($sm)
+      font-size: 36px
+      max-width: 100%
+      width: 100%
+      margin-bottom: 20px
+  &-tabs
+    display: flex
+    margin: 0 0 12px auto
+    padding: 0
+    list-style: none
+    gap: 8px
+    +r($sm)
+      margin: 0 0 20px
+    li
+      display: block
+      &.active, &:hover
+        .btn-tab
+          background: linear-gradient(160.34deg, #FFE8CC -3.43%, #FFD39D 71.5%, #FFD39D 71.51%, #FFE8CC 104.25%)
+          border-color: rgba(255, 255, 255, 0)
+    .btn-tab
+      display: block
+      border: 1px solid #2A0B0A
+      padding: 18px 30px 16px
+      text-transform: uppercase
+      cursor: pointer
+      color: #2A0B0A
+      background: none
+      font-size: 25px
+      border-radius: 20px
+      min-width: 250px
+      text-align: center
+      +r($xl)
+        min-width: 100px
+        font-size: 21px
+        
+.tab-box
+  display: none
+  &.--show
+    display: block
+
+.news-list
+  display: flex
+  flex-wrap: wrap
+  margin: 0 -18px
+  gap: 40px 0
+  
+.news-item
+  min-width: 33.333%
+  max-width: 33.333%
+  padding: 18px
+  display: flex
+  +r($xl)
+    min-width: 50%
+    max-width: 50%
+    padding: 15px
+  +r($sm)
+    min-width: 100%
+    max-width: 100%
+  &-wrapper
+    background: #08051e
+    border-radius: 30px
+    position: relative
+    padding: 45px 17px
+    display: flex
+    flex-direction: column
+    +r($lg)
+      padding: 30px 15px
+    &:before
+      content: ""
+      width: 84px
+      height: 62px
+      border-radius: 80px / 50px
+      position: absolute
+      top: calc(100% - 40px)
+      left: calc(50% - 42px)
+      background: #08051e
+  &__title
+    margin-bottom: 12px
+    height: 99px
+    overflow: hidden
+    +r($lg)
+      height: 70px
+    &-link
+      background: linear-gradient(180deg, #FFD39D 0%, #A3763F 100%)
+      font-size: 40px
+      font-weight: 500
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      background-clip: text
+      color: transparent
+      text-transform: uppercase
+      line-height: 1.2
+      text-decoration: none
+      +r($hd)
+        font-size: 34px
+      +r($lg)
+        font-size: 24px
+  .text
+    color: #FFD5A3
+    font-size: 20px
+    margin-bottom: 11px
+    max-height: 72px
+    overflow: hidden
+    line-height: 1.2
+    +r($hd)
+      font-size: 18px
+    a
+      color: inherit
+  .date
+    margin-top: auto
+    margin-bottom: 10px
+    font-size: 16px
+    color: #B49570
+
+.news-etc
+  text-align: center
+  padding-top: 40px
+  .news-link-all
+    background: linear-gradient(160.34deg, #FFE8CC -3.43%, #FFD39D 71.5%, #FFD39D 71.51%, #FFE8CC 104.25%)
+    padding: 25px
+    border: none
+    cursor: pointer
+    border-radius: 20px
+    display: inline-block
+    vertical-align: top
+    +r($lg)
+      padding: 16px
+    &:hover
+      background: linear-gradient(160.34deg, #FFD39D -3.43%, #FFD39D 71.5%, #FFD39D 71.51%, #FFD39D 104.25%)
+    
+    &__label
+      background: linear-gradient(180deg, #704107 0%, #2A0B0A 100%)
+      font-size: 47px
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      background-clip: text
+      color: transparent
+      font-family: 'VinqueRg', sans-serif
+      text-transform: uppercase
+      +r($hd)
+        font-size: 40px
+      +r($xl)
+        font-size: 32px
+      +r($lg)
+        font-size: 28px
+      
+.section-support
+  display: flex
+  +r($lg)
+    flex-direction: column-reverse
+.support-form
+  background: url(../img/bg-podderzka.png) 50% 0 no-repeat
+  background-size: contain
+  width: 670px
+  height: 586px
+  padding: 80px 50px 0
+  display: flex
+  flex-direction: column
+  gap: 20px
+  +r($xl)
+    padding: 60px 40px
+    width: auto
+    height: auto
+    background: linear-gradient(135deg,  #fee3c1 0%, #fed29c 100%)
+    border-radius: 40px
+  +r($lg)
+    width: 100%
+    padding: 30px
+    margin-bottom: 30px
+  +r($xss)
+    width: auto
+    margin: 0 -15px
+    border-radius: 0
+  &__btn
+    text-align: center
+    margin-top: 16px
+  &__submit
+    background: linear-gradient(332.65deg, #08051E -33.48%, #624F37 147.99%)
+    padding: 11px 25px
+    border: none
+    cursor: pointer
+    border-radius: 20px
+    display: inline-block
+    vertical-align: top
+    font-size: 32px
+    font-family: 'VinqueRg', sans-serif
+    text-align: center
+    text-transform: uppercase
+    +r($xl)
+      font-size: 24px
+    +r($xss)
+      font-size: 21px
+    &:hover
+      background: linear-gradient(332.65deg, #08051E -33.48%, #08051E 147.99%)
+    span
+      color: #FFD5A3
+    
+      
+  .b-checkbox__label
+    font-size: 20px
+    +r($xl)
+      font-size: 16px
+    
+  &__label
+    font-size: 32px
+    color: #342615
+    margin-bottom: 12px
+    +r($xl)
+      font-size: 24px
+  &__input
+  .ik_select
+    height: 60px
+    +r($xl)
+      height: 48px
+  .inp-select
+    background: #FFE9CF
+    display: flex
+    border-radius: 10px
+    &__inp
+      flex: 1 1 auto
+    &__select
+      border-left: 2px solid #FFD29C
+      width: 130px
+      display: flex
+      height: 60px
+      +r($xl)
+        height: 48px
+    .input
+      background: #FFE9CF
+      border: none
+      width: 100%
+      padding: 20px 20px
+      +r($xl)
+        padding: 10px
+        
+  .ik_select_link_text
+    +r($xl)
+      font-size: 24px
+      
+.support-text
+  color: #FFE8CC
+  font-size: 36px
+  font-weight: 400
+  text-shadow: 0px 6px 5px #2A0B0A21
+  max-width: 50%
+  margin-left: 60px
+  flex: 1 1 auto
+  @media(max-width: 1500px)
+    font-size: 28px
+  +r($hd)
+    font-size: 24px
+  +r($lg)
+    width: 100%
+    max-width: 100%
+    padding: 0 30px
+    margin: 0 0 40px
+  +r($sm)
+    padding: 0
+    font-size: 18px
+  strong
+    font-weight: 700
+  .support-title
+    background: linear-gradient(135.32deg, #FFEBD3 -1.38%, #ad9476 113.12%)
+    font-size: 67px
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+    color: transparent
+    font-family: 'VinqueRg', sans-serif
+    text-transform: uppercase
+    margin-bottom: 35px
+    @media(max-width: 1500px)
+      font-size: 52px
+    +r($hd)
+      font-size: 48px
+    +r($xl)
+      font-size: 36px
+      
+    +r($sm)
+      font-size: 31px
+    +r($xss)
+      font-size: 28px

@@ -67,10 +67,12 @@
     margin-left: auto
     position: relative
     z-index: 2
+    display: flex
+    gap: 24px
     +r($hd)
       margin-left: 0
       margin-right: auto
-    +r($sm)
+    +r($lg)
       display: none
   .btn-login
     color: #FFE8CC
@@ -97,8 +99,8 @@
     display: none
     +r($hd)
       display: block
-    +r($sm)
       margin-left: auto
+
       
     .svg-icon
       fill: #fff

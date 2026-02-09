@@ -1,0 +1,131 @@
+/******* SELECT **********/
+
+/* .ik_select { display:inline-block; *display:inline;zoom:1; position:relative; vertical-align:top;color:#493d32;font-family: 'PT Sans', sans-serif; height:25px; font-size:12px; background:#fff; cursor:pointer; padding:0 ; border:1px solid #84786d; border-radius:3px;}
+*/
+.ik_select {
+  cursor: pointer;
+}
+
+.ik_select_dropdown {
+  font-size: 12px;
+  color: #fff;
+  font-weight: 300;
+  margin-top: и1px;
+  width: 100% !important;
+  top: 100% !important;
+  left: 0 !important;
+}
+
+.ik_select_dropdown ul {
+  display: block;
+  padding: 0;
+  position: relative;
+  left: 0px;
+}
+
+.ik_select_dropdown ul li {
+  margin: 0;
+  list-style: none;
+  color: #343434;
+}
+
+.ik_select_dropdown ul li {
+  display: block;
+  padding: 5px 15px;
+}
+
+.ik_select_dropdown ul li:hover {
+  background: #fff;
+}
+
+.ik_select_dropdown ul li span {
+  display: block;
+}
+
+.ik_select {
+  background: #FFE9CF;
+  color: #2A0B0A;
+  display: inline-flex;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 300;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+  vertical-align: top;
+  width: 100% !important;
+  border-radius: 10px;
+
+}
+
+.ik_select_link_text {
+  padding-right: 20px;
+  color: #2A0B0A;
+  font-size: 32px;
+  background: url(../img/arr-select2.png) 100% calc(50% + 3px) no-repeat;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.ik_select select {
+  z-index: 4;
+  width: 100%;
+}
+
+.ik_select_link {
+  overflow: hidden;
+  padding: 2px 15px 2px;
+  white-space: nowrap;
+  position: relative;
+  color: #2A0B0A;
+  font-size: 32px;
+  font-weight: 400;
+  z-index: 99;
+  border-radius: 0;
+  flex: 1 1  auto;
+  display: flex;
+  align-items: center;
+}
+
+.ik_select.open_sel .ik_select_link {
+}
+
+.ik_select_list li {
+  padding: 0;
+  position: relative;
+  cursor: pointer;
+  list-style: none;
+  margin: 0;
+}
+
+.ik_select_list li:hover {
+  color: #1c6cd5;
+}
+
+.ik_select_list {
+  left: 0px;
+  top: 0px;
+  border-top: none;
+  margin: 0 1px 0 0;
+  border-top: none;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, .1);
+  background: #fff;
+}
+
+.ik_select_list ul {
+  font-size: 14px;
+  color: #25262b;
+  margin: 0;
+  padding: 0;
+  display: block;
+  margin-right: 1px;
+}
+
+.ik_select_filter_wrap .ik_select_filter {
+  width: 100% !important;
+  outline: none;
+}
+
+.ik_select_filter_wrap {
+  padding: 5px 15px;
+}
