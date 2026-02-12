@@ -1,0 +1,123 @@
+.page-news
+  padding: 130px 0
+  min-height: 100vh
+  position: relative
+  z-index: 1
+  &:before
+    background: url(../img/paper.png) 50% 50% no-repeat
+    background-size: cover
+    position: absolute
+    top: -300px
+    width: 100%
+    content: ""
+    min-height: 2600px
+    height: calc(100% + 600px)
+    z-index: -1
+    +r($lg)
+      background-size:  140% auto !important
+      background: url(../img/pepper2.png) 50% 0% repeat-y
+  &-h1
+    font-size: 83px
+    background: linear-gradient(137.08deg, #6E5B43 -15.95%, #08051E 78.96%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+    color: transparent
+    text-transform: uppercase
+    font-family: 'VinqueRg', sans-serif
+    margin-bottom: 34px
+    +r($sm)
+      font-size: 60px
+    +r($xs)
+      font-size: 50px
+  &-actions
+    display: flex
+    gap: 12px
+    margin-bottom: 36px
+    +r($sm)
+      flex-wrap: wrap
+    .btn-action
+      font-size: 25px
+      color: #2A0B0A
+      border: 1px solid #2A0B0A
+      border-radius: 20px
+      padding: 8px 30px 10px
+      width: 255px
+      text-transform: uppercase
+      text-align: center
+      display: inline-block
+      vertical-align: top
+      +r($xl)
+        width: auto
+        
+      &.--active, &:hover
+        background: linear-gradient(0.31deg, #08051E 23.94%, #B5A086 253.23%)
+        border-color: rgba(255,255,255, 0)
+        span
+          background: linear-gradient(160.34deg, #FFE8CC -3.43%, #FFD39D 26.9%, #FFD39D 71.51%, #FFE8CC 104.25%)
+          -webkit-background-clip: text
+          -webkit-text-fill-color: transparent
+          background-clip: text
+          color: transparent
+          text-transform: uppercase
+
+  .news-list
+    margin: 0 -10px 45px
+    gap: 10px 0
+    .news-item
+      color: #FFEBD3
+      min-width: 290px
+      max-width: inherit
+      flex: 1
+      padding: 0 10px
+      margin-bottom: 40px
+      &.--blue
+        .news-item-wrapper
+          background: linear-gradient(354.27deg, #08051E -5.52%, #3543BD 125.85%)
+          &:before
+            background: #0c0a2a
+      &-wrapper
+        padding: 20px
+      &__date
+        font-size: 14px
+        font-weight: 200
+        margin-bottom: 20px
+      &__title
+        height: auto
+        max-height: 60px
+        margin-bottom: 11px
+        
+        &-link
+          font-size: 20px
+          color: #FFEBD3
+          background: none
+          -webkit-background-clip: unset
+          -webkit-text-fill-color: inherit
+          background-clip: unset
+          line-height: 1.4
+      .text
+        font-size: 15px
+        color: #FFEBD3
+        font-weight: 400
+        max-height: 38px
+        
+      .img
+        overflow: hidden
+        height: 116px
+        margin-bottom: 3px
+        margin-top: auto
+        img
+          object-fit: cover
+      &__bottom
+        display: flex
+        justify-content: space-between
+        color: #FFEBD3
+        font-size: 14px
+        font-weight: 200
+        &-left
+        &-right
+        .action-name
+          color: #FFEBD3
+        .more
+          text-decoration: underline
+          color: #FFEBD3

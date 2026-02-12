@@ -1030,3 +1030,38 @@ table tr th:last-child
 .--md-pt18
   +r($md)
     padding-top: 18px
+
+    
+    
+.pagination
+  &-box
+  &-list
+    display: flex
+    justify-content: center
+    margin: 0
+    padding: 0
+    list-style: none
+    gap: 12px
+    +r($xs)
+      flex-wrap: wrap
+  &-item
+    font-size: 16px
+    &.--active, &:hover
+      .pagination-link
+        color: #FFEBD3
+        background: #201C3C
+  &-link
+    width: 31px
+    height: 31px
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 50%
+    border: 1px solid #201C3C
+    color: #201C3C
+    &.--arr
+      border-color: rgba(255,255,255, 0)
+      background: none !important
+
+    
+    
