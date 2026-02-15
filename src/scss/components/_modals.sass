@@ -103,15 +103,18 @@
     width: 100%
   &__body
     width: 100%
-    padding: 50px 40px 32px
-    background: $baseBg
+    padding: 30px 90px
+    background: linear-gradient(149.08deg, #FFE8CC 1.59%, #DEB98C 46.89%, #FFE8CC 103.13%)
     box-shadow: -2px 2px 14px 0px rgba(27, 27, 27, 0.10)
-    border-radius: 16px
+    border-radius: 40px
     position: relative
-    font-size: 15px
+    font-size: 32px
+    +r($lg)
+      padding-left: 32px
+      padding-right: 32px
     +r($sm)
-      padding-left: 12px
-      padding-right: 12px
+      padding-left: 32px
+      padding-right: 32px
   &__header
     padding-bottom: 20px
   &-title
@@ -130,7 +133,7 @@
     svg
       width: 24px
       height: 24px
-      fill: rgba(0, 0, 39, 0.38)
+      fill: rgba(0, 0, 39, 0.58)
     &:hover
       svg
         fill: #3478F6
@@ -138,6 +141,10 @@
   &-form
     &__row
       padding-bottom: 18px
+      display: flex
+      +r($md)
+        flex-wrap: wrap
+        gap: 18px
       &.pb-32
         padding-bottom: 32px
     .label
@@ -162,6 +169,30 @@
       max-width: 50%
       min-width: 50%
       padding: 0 10px
+      +r($md)
+        max-width: 100%
+        min-width: 100%
+    &__col1
+      max-width: 100%
+      min-width: 100%
+      padding: 0 10px
+
+  .btn
+    background: linear-gradient(332.65deg, #08051E -33.48%, #624F37 147.99%)
+    padding: 12px 30px 15px
+    text-transform: uppercase
+    border: none
+    cursor: pointer
+    border-radius: 20px
+    display: inline-block
+    vertical-align: top
+    color: #FFD5A3
+    font-size: 32px
+    font-family: 'VinqueRg', sans-serif
+    +r($lg)
+      padding: 16px
+    &:hover
+      background: linear-gradient(332.65deg, #08051E -33.48%, #08051E 147.99%)
 
 
 
@@ -234,153 +265,14 @@
 
 
 
-
-// модалка выезжает справа
-
-.just-modal--right
-  .just-modal
-    position: fixed
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
-    z-index: 101
-    display: none
-    text-align: center
-    background: 0
-    padding: 0
-    font-size: 14px
-    overflow: hidden
-
-    &.open
-      display: block !important
-      opacity: 1
-      background: rgba(0, 62, 91, 0.40)
-      animation: show-over .3s linear 0s 1
-      .just-modal
-        &__overlay
-          opacity: 1
-
-    &.in
-      .just-modal
-        &__wrapper
-          opacity: 1
-          right: 0
-          animation: show-wrapper-right-left .3s linear 0s 1
-    &__overlay
-      position: absolute
-      top: 0
-      left: 0
-      width: 100%
-      height: 100%
-      z-index: 0
-      background: rgba(0,0,0,0)
-      opacity: 0
-      transition: all 0.3s ease
-
-    &__wrapper
-      max-width: 630px
-      width: 70%
-      text-align: left
-      height: 100vh
-      padding: 0
-      align-items: center
-      justify-content: center
-      position: relative
-      display: flex
-      margin: 0 0 0 auto
-      right: -100vw
-      opacity: 0
-
-    &__container
-      width: 100%
-      height: 100%
-    &__body
-      width: 100%
-      padding: 80px 40px 40px
-      background: #fff
-      position: relative
-      height: 100%
-    &__close
-      &-wrapper
-        position: absolute
-        top: 0
-        left: 0
-        right: 0
-        background: $clrGrey20
-        display: flex
-        align-items: center
-        justify-content: flex-end
-        padding: 8px
-      svg
-        fill: rgba(0, 0, 39, 0.38)
-      &:hover
-        svg
-          fill: $clrGrey90
-
-
-.modal-data
-  &-wrapper
-    display: flex
-    overflow: hidden
-    position: relative
-    flex-direction: column
-    height: 100%
-  &-header
-    &__title
-      font-size: 28px
-      padding-bottom: 32px
-      color: $clrGrey90
-      font-weight: 500
-  &-content
-    overflow: auto
-    flex: 1 1 auto
-  &-row
-    padding-bottom: 32px
-  &-subtitle
-    font-weight: 500
-    padding-bottom: 12px
-  &-comment
-    background: $clrGrey20
-    font-size: 16px
-    font-weight: 300
-    padding: 24px
-    margin-bottom: 32px
-  &-footer
-    &__btns
-      display: flex
-      gap: 32px
-      padding-top: 32px
-      justify-content: flex-end
-
-
-.modal-review
-  .just-modal__body
-    background: #fff
-.review-list
-  overflow: auto
-  max-height: 80vh
-  margin: 40px -20px 0 0
-  padding-right: 20px
-.review-item
-  background: $baseBg
-  margin-bottom: 18px
-  border-radius: 16px
-  padding: 24px 18px
-  .name
+#modal-faq
+  .just-modal__container
+    max-width: 1240px
+  .small-text
+    font-size: 20px
+    color: #7E613D
+  .--center
+    justify-content: center
+  
+  .b-checkbox__label
     font-size: 18px
-    font-weight: 600
-  .text-gray
-    color: $clrGrey60
-  &__header
-    display: flex
-    padding-bottom: 12px
-  &__title
-    font-size: 18px
-    font-weight: 600
-  &__date
-    margin-left: auto
-    color: $clrGrey60
-  &__text
-    padding-bottom: 18px
-  &__bottom

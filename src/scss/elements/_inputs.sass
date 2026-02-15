@@ -1,6 +1,6 @@
 .input
   padding: 12px
-  font-size: 15px
+  font-size: 20px
   color: #342615
   background: #FFE9CF
   border-radius: 10px
@@ -8,6 +8,14 @@
   width: 100%
   +r($sm)
     padding: 8px
+  &:hover
+    border-color: $clrPrimaryHover
+  &:focus
+    border-color: #342615
+  &.inp-error
+    border-color: $clrDangerMain
+  &.inp-succ
+    border-color: $clrSuccessMain
     
   &.disabled, &[disabled]
     border-color: $clrGrey40
@@ -18,15 +26,15 @@
 .textarea
   padding: 12px
   font-size: 15px
-  color:  $clrGrey50
-  background: #fff
-  border-radius: 4px
-  border: 1px solid $clrGrey40
+  color: #342615
+  background: #FFE9CF
+  border-radius: 10px
+  border: none
   width: 100%
   &:hover
     border-color: $clrPrimaryHover
   &:focus
-    border-color: $clrPrimaryFocus
+    border-color: #342615
   &.inp-error
     border-color: $clrDangerMain
   &.inp-succ
@@ -40,6 +48,7 @@
   position: relative
   display: inline-block
   vertical-align: top
+  
   input
     position: absolute
     top: 0
@@ -63,6 +72,7 @@
       font-size: 16px
     a
       text-decoration: underline
+      color: inherit
       &:hover
         text-decoration: none
     .checked

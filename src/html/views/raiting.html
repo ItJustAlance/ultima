@@ -1,0 +1,456 @@
+<%
+var data = {
+title: "Заголовок сайта",
+copyright: "itJustAlance",
+bodyClass: ""
+};
+
+<!--var mobileFooter = _.template(require('../includes/mobile-footer.html'))(data);-->
+<!--var mobileMenu = _.template(require('../includes/mobile-menu.html'))(data);-->
+
+<!--var footerHtml = _.template(require('../includes/footer.html'))({-->
+<!--...data,-->
+<!--mobileFooter,-->
+<!--mobileMenu-->
+<!--});-->
+
+
+%>
+<%= _.template(require('../includes/header.html'))(data) %>
+
+<div class="container">
+  <section class="page-raiting">
+    <div class="all">
+      <div class="raiting__header">
+        <ul class="raiting__filter">
+          <li class="raiting__filter-item"><a class="raiting__filter-item__link" href=""><span>ТОП скиллов</span></a></li>
+          <li class="raiting__filter-item"><a class="raiting__filter-item__link" href=""><span>ТОП убийств</span></a></li>
+          <li class="raiting__filter-item"><a class="raiting__filter-item__link" href=""><span>ТОП крафтеров</span></a></li>
+          <li class="raiting__filter-item"><a class="raiting__filter-item__link" href=""><span>ТОП кладоискателей</span></a></li>
+          <li class="raiting__filter-item"><a class="raiting__filter-item__link" href=""><span>ТОП турниров</span></a></li>
+        </ul>
+      </div>
+      <div class="raiting__content">
+        <div class="raiting__options">
+          Настройки:
+          <span class="raiting__options-item">
+            ТОП-10
+            <span class="arr"><img src="img/arr-option.svg" alt=""></span>
+          </span>
+        </div>
+        <div class="raiting__table">
+          <div class="raiting__table-row --th">
+            <div class="raiting__table-td">
+              Ник
+            </div>
+            <div class="raiting__table-td">
+              Маг
+            </div>
+            <div class="raiting__table-td">
+              Воин
+            </div>
+            <div class="raiting__table-td">
+              Некр
+            </div>
+            <div class="raiting__table-td">
+              Карма
+            </div>
+            <div class="raiting__table-td">
+              Онлайн
+            </div>
+          </div><!--end raiting__table-row -->
+          <div class="raiting__table-row">
+            <div class="raiting__table-td">
+              <div class="first-td">
+                <div class="raiting__table-td__num">1</div>
+                <div class="raiting__table-td__label">Ник:</div>
+                <div class="raiting__table-td__value">ChahCHaCha</div>
+              </div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Маг:</div>
+              <div class="raiting__table-td__value">1333</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Воин:</div>
+              <div class="raiting__table-td__value">432</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Некр:</div>
+              <div class="raiting__table-td__value">5</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Карма:</div>
+              <div class="raiting__table-td__value">32</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Онлайн:</div>
+              <div class="raiting__table-td__value">44 ч</div>
+            </div>
+          </div><!--end raiting__table-row -->
+          <div class="raiting__table-row">
+            <div class="raiting__table-td">
+              <div class="first-td">
+              <div class="raiting__table-td__num">1</div>
+              <div class="raiting__table-td__label">Ник:</div>
+              <div class="raiting__table-td__value">Theresa Lane</div>
+              </div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Маг:</div>
+              <div class="raiting__table-td__value">120</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Воин:</div>
+              <div class="raiting__table-td__value">124</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Некр:</div>
+              <div class="raiting__table-td__value">532</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Карма:</div>
+              <div class="raiting__table-td__value">2333</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Онлайн:</div>
+              <div class="raiting__table-td__value">55ч</div>
+            </div>
+          </div><!--end raiting__table-row -->
+          <div class="raiting__table-row">
+            <div class="raiting__table-td">
+              <div class="first-td">
+              <div class="raiting__table-td__num">2</div>
+              <div class="raiting__table-td__label">Ник:</div>
+              <div class="raiting__table-td__value">MichaelSuperMag</div>
+              </div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Маг:</div>
+              <div class="raiting__table-td__value">1220</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Воин:</div>
+              <div class="raiting__table-td__value">1324</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Некр:</div>
+              <div class="raiting__table-td__value">4532</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Карма:</div>
+              <div class="raiting__table-td__value">2333</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Онлайн:</div>
+              <div class="raiting__table-td__value">55ч</div>
+            </div>
+          </div><!--end raiting__table-row -->
+          <div class="raiting__table-row">
+            <div class="raiting__table-td">
+              <div class="first-td">
+              <div class="raiting__table-td__num">3</div>
+              <div class="raiting__table-td__label">Ник:</div>
+              <div class="raiting__table-td__value">VAGADroch</div>
+              </div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Маг:</div>
+              <div class="raiting__table-td__value">120</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Воин:</div>
+              <div class="raiting__table-td__value">1254</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Некр:</div>
+              <div class="raiting__table-td__value">532</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Карма:</div>
+              <div class="raiting__table-td__value">23373</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Онлайн:</div>
+              <div class="raiting__table-td__value">535ч</div>
+            </div>
+          </div><!--end raiting__table-row -->
+          <div class="raiting__table-row">
+            <div class="raiting__table-td">
+              <div class="first-td">
+              <div class="raiting__table-td__num">4</div>
+              <div class="raiting__table-td__label">Ник:</div>
+              <div class="raiting__table-td__value">KotSobakaYlibaka</div>
+              </div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Маг:</div>
+              <div class="raiting__table-td__value">1220</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Воин:</div>
+              <div class="raiting__table-td__value">1324</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Некр:</div>
+              <div class="raiting__table-td__value">5432</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Карма:</div>
+              <div class="raiting__table-td__value">2133</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Онлайн:</div>
+              <div class="raiting__table-td__value">545ч</div>
+            </div>
+          </div><!--end raiting__table-row -->
+          <div class="raiting__table-row">
+            <div class="raiting__table-td">
+              <div class="first-td">
+              <div class="raiting__table-td__num">5</div>
+              <div class="raiting__table-td__label">Ник:</div>
+              <div class="raiting__table-td__value">Tigr</div>
+              </div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Маг:</div>
+              <div class="raiting__table-td__value">10</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Воин:</div>
+              <div class="raiting__table-td__value">14</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Некр:</div>
+              <div class="raiting__table-td__value">52</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Карма:</div>
+              <div class="raiting__table-td__value">23</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Онлайн:</div>
+              <div class="raiting__table-td__value">5ч</div>
+            </div>
+          </div><!--end raiting__table-row -->
+          <div class="raiting__table-row">
+            <div class="raiting__table-td">
+              <div class="first-td">
+              <div class="raiting__table-td__num">6</div>
+              <div class="raiting__table-td__label">Ник:</div>
+              <div class="raiting__table-td__value">Ione</div>
+              </div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Маг:</div>
+              <div class="raiting__table-td__value">-</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Воин:</div>
+              <div class="raiting__table-td__value">124</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Некр:</div>
+              <div class="raiting__table-td__value">-</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Карма:</div>
+              <div class="raiting__table-td__value">33</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Онлайн:</div>
+              <div class="raiting__table-td__value">1255ч</div>
+            </div>
+          </div><!--end raiting__table-row -->
+          <div class="raiting__table-row">
+            <div class="raiting__table-td">
+              <div class="first-td">
+              <div class="raiting__table-td__num">7</div>
+              <div class="raiting__table-td__label">Ник:</div>
+              <div class="raiting__table-td__value">SuperMegaDroch2006</div>
+              </div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Маг:</div>
+              <div class="raiting__table-td__value">120</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Воин:</div>
+              <div class="raiting__table-td__value">124</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Некр:</div>
+              <div class="raiting__table-td__value">532</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Карма:</div>
+              <div class="raiting__table-td__value">2333</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Онлайн:</div>
+              <div class="raiting__table-td__value">55ч</div>
+            </div>
+          </div><!--end raiting__table-row -->
+          <div class="raiting__table-row">
+            <div class="raiting__table-td">
+              <div class="first-td">
+              <div class="raiting__table-td__num">8</div>
+              <div class="raiting__table-td__label">Ник:</div>
+              <div class="raiting__table-td__value">Kolyan888</div>
+              </div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Маг:</div>
+              <div class="raiting__table-td__value">120</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Воин:</div>
+              <div class="raiting__table-td__value">124</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Некр:</div>
+              <div class="raiting__table-td__value">532</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Карма:</div>
+              <div class="raiting__table-td__value">2333</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Онлайн:</div>
+              <div class="raiting__table-td__value">55ч</div>
+            </div>
+          </div><!--end raiting__table-row -->
+          <div class="raiting__table-row">
+            <div class="raiting__table-td">
+              <div class="first-td">
+              <div class="raiting__table-td__num">9</div>
+              <div class="raiting__table-td__label">Ник:</div>
+              <div class="raiting__table-td__value">Petya Pisin</div>
+              </div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Маг:</div>
+              <div class="raiting__table-td__value">120</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Воин:</div>
+              <div class="raiting__table-td__value">124</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Некр:</div>
+              <div class="raiting__table-td__value">532</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Карма:</div>
+              <div class="raiting__table-td__value">2333</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Онлайн:</div>
+              <div class="raiting__table-td__value">55ч</div>
+            </div>
+          </div><!--end raiting__table-row -->
+          <div class="raiting__table-row">
+            <div class="raiting__table-td">
+              <div class="first-td">
+              <div class="raiting__table-td__num">10</div>
+              <div class="raiting__table-td__label">Ник:</div>
+              <div class="raiting__table-td__value">Mitchell Russell</div>
+              </div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Маг:</div>
+              <div class="raiting__table-td__value">120</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Воин:</div>
+              <div class="raiting__table-td__value">124</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Некр:</div>
+              <div class="raiting__table-td__value">532</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Карма:</div>
+              <div class="raiting__table-td__value">2333</div>
+            </div>
+            <div class="raiting__table-td">
+              <div class="raiting__table-td__label">Онлайн:</div>
+              <div class="raiting__table-td__value">55ч</div>
+            </div>
+          </div><!--end raiting__table-row -->
+          
+        </div>
+        <div class="pagination-box">
+          <ul class="pagination-list">
+            <li class="pagination-item">
+              <a href="#" class="pagination-link --arr">
+                <img src="img/pag-arr-l.svg" alt="">
+              </a>
+            </li>
+            <li class="pagination-item --active">
+              <a href="#" class="pagination-link">
+                1
+              </a>
+            </li>
+            <li class="pagination-item">
+              <a href="#" class="pagination-link">
+                2
+              </a>
+            </li>
+            <li class="pagination-item">
+              <a href="#" class="pagination-link">
+                3
+              </a>
+            </li>
+            <li class="pagination-item">
+              <a href="#" class="pagination-link">
+                4
+              </a>
+            </li>
+            <li class="pagination-item">
+              <a href="#" class="pagination-link">
+                5
+              </a>
+            </li>
+            <li class="pagination-item">
+              <a href="#" class="pagination-link">
+                6
+              </a>
+            </li>
+            <li class="pagination-item">
+              <a href="#" class="pagination-link">
+                7
+              </a>
+            </li>
+            <li class="pagination-item">
+              <a href="#" class="pagination-link">
+                8
+              </a>
+            </li>
+            <li class="pagination-item">
+              <a href="#" class="pagination-link">
+                9
+              </a>
+            </li>
+            <li class="pagination-item">
+              <a href="#" class="pagination-link">
+                10
+              </a>
+            </li>
+            <li class="pagination-item">
+              <a href="#" class="pagination-link --arr">
+                <img src="img/pag-arr-r.svg" alt="">
+              </a>
+            </li>
+          </ul>
+        
+        </div>
+      </div><!--end raiting__content-->
+    </div><!--end all -->
+  </section>
+ 
+  
+</div>
+
+
+<%= _.template(require('../includes/footer.html'))(data) %>

@@ -114,10 +114,134 @@
         color: #FFEBD3
         font-size: 14px
         font-weight: 200
-        &-left
         &-right
         .action-name
           color: #FFEBD3
         .more
           text-decoration: underline
           color: #FFEBD3
+
+          
+.news-detail
+  background: url(../img/bg2.png) 50% 50% no-repeat
+  background-size: cover
+  padding: 40px 0 100px
+  margin-bottom: -150px
+  
+  &-title
+    font-size: 64px
+    font-weight: 500
+    background: linear-gradient(4.4deg, #1A2166 -31.59%, #0F0201 127%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+    color: transparent
+    text-transform: uppercase
+    +r($xxl)
+      font-size: 58px
+    +r($xl)
+      font-size: 40px
+    +r($sm)
+      font-size: 36px
+    +r($xs)
+      font-size: 32px
+      
+  &-content
+    background: #FFE8CC
+    padding: 94px 94px 120px
+    border-radius: 70px
+    +r($xxl)
+      padding: 90px 40px 120px
+    +r($sm)
+      border-radius: 0
+      margin: 0 -15px
+      padding: 60px 24px 120px
+  &__header
+  
+    margin-bottom: 40px
+    .labesls
+      display: flex
+      margin: 0 0 40px
+      padding: 0
+      list-style: none
+      gap: 26px
+      +r($sm)
+        flex-direction: column
+      .label-item
+        font-size: 20px
+        color: #1A2166
+
+  &-image
+    margin-bottom: 62px
+    .img
+      overflow: hidden
+      border-radius: 12px
+      margin-bottom: -15px
+      min-height: 220px
+      object-fit: cover
+      img
+        min-height: 220px
+        object-fit: cover
+      &-label
+        background: #FFF5E8
+        color: #1A2166
+        font-size: 20px
+        padding: 25px 15px 15px
+        border-radius: 12px
+        +r($sm)
+          font-size: 18px
+
+        
+.article
+  display: flex
+  flex-direction: column
+  gap: 18px
+  color: #0F0201
+  font-size: 20px
+  +r($sm)
+    font-size: 16px
+  h2
+    font-size: 32px
+    background: linear-gradient(4.4deg, #1A2166 -31.59%, #0F0201 127%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+    color: transparent
+    text-transform: uppercase
+    font-weight: 400
+    margin: 0
+    padding: 0
+    +r($xxl)
+      font-size: 28px
+    +r($xl)
+      font-size: 20px
+  p
+    margin: 0
+    padding: 0
+    & + h2
+      padding-top: 22px
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
+    display: flex
+    flex-direction: column
+    gap: 12px
+    li
+      position: relative
+      display: block
+      padding: 0 0 0 16px
+      &:before
+        background: #0F0201
+        border-radius: 50%
+        position: absolute
+        top: 12px
+        left: 0
+        width: 6px
+        height: 6px
+        content: ""
+
+  a
+    color: #0F0201
+    &:hover
+      color: #1A2166

@@ -1,0 +1,62 @@
+<%
+var data = {
+title: "Заголовок сайта",
+copyright: "itJustAlance",
+bodyClass: ""
+};
+
+<!--var mobileFooter = _.template(require('../includes/mobile-footer.html'))(data);-->
+<!--var mobileMenu = _.template(require('../includes/mobile-menu.html'))(data);-->
+
+<!--var footerHtml = _.template(require('../includes/footer.html'))({-->
+<!--...data,-->
+<!--mobileFooter,-->
+<!--mobileMenu-->
+<!--});-->
+
+
+%>
+<%= _.template(require('../includes/header.html'))(data) %>
+
+<div class="container">
+  <section class="faq-page">
+    <div class="all">
+      <div class="faq-content">
+        <h1 class="faq-title">FAQ</h1>
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3 class="faq-item__title">Как скачать клиент?</h3>
+            <div class="faq-item__text">Скачайте клиент по ссылке, установите, зарегистрируйтесь на сайте и подключитесь к серверу.</div>
+            <div class="faq-item__line"></div>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-item__title">Есть ли вайпы?</h3>
+            <div class="faq-item__text">Нет, только плановые обновления.</div>
+            <div class="faq-item__line"></div>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-item__title">Поддерживается ли Orion?</h3>
+            <div class="faq-item__text">Да, полная совместимость (без читов).</div>
+            <div class="faq-item__line"></div>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-item__title">Как донатить в крипте?</h3>
+            <div class="faq-item__text">Выберите валюту — адрес генерируется автоматически.</div>
+            <div class="faq-item__line"></div>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-item__title">Проблемы с входом?</h3>
+            <div class="faq-item__text">Поддержка в Telegram 24/7.</div>
+            <div class="faq-item__line"></div>
+          </div>
+        </div><!--end faq-list -->
+        <div class="faq-btn-form"><span class="faq-btn js-btn-modal" data-modal="modal-faq"><span class="faq-btn-label">Задать свой вопрос</span></span></div>
+      </div><!--end faq-content -->
+    </div><!--end all -->
+  </section>
+ 
+  
+</div>
+
+
+<%= _.template(require('../includes/footer.html'))(data) %>

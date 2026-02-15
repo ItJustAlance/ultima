@@ -1,0 +1,121 @@
+.faq
+  &-page
+    background: url(../img/bg2.png) 50% 50% no-repeat
+    background-size: cover
+    padding: 40px 0 100px
+    margin-bottom: -150px
+
+  &-content
+    backdrop-filter: blur(18px)
+    box-shadow: 0px 4px 44.1px 0px #000000
+    background: rgba(8, 5, 29, 0.2)
+    border-radius: 70px
+    padding: 83px 83px 120px
+    +r($lg)
+      padding: 70px 40px 120px
+    +r($sm)
+      padding: 50px 20px 100px
+      border-radius: 0
+      margin: 0 -15px
+  &-title
+    font-size: 83px
+    background: linear-gradient(160.34deg, #FFE8CC -3.43%, #FFD39D 58.69%, #FFE8CC 104.25%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+    color: transparent
+    font-family: 'VinqueRg', sans-serif
+    text-transform: uppercase
+    margin-bottom: 110px
+    +r($lg)
+      font-size: 70px
+      margin-bottom: 50px
+    +r($sm)
+      font-size: 64px
+  &-list
+    display: flex
+    flex-direction: column
+    gap: 90px
+    margin-bottom: 100px
+    +r($lg)
+      gap: 50px
+  &-item
+    &:last-child
+     .faq-item__line
+       display: none
+    &__line
+      background: #FFE8CC
+      height: 8px
+      position: relative
+      margin: 70px 50px 0
+      +r($sm)
+        height: 2px
+        margin: 50px 20px 0
+      &:before, &:after
+        content: ""
+        background: url(../img/arr3-l.svg) 50% 50% no-repeat
+        width: 67px
+        height: 64px
+        display: block
+        position: absolute
+        top: -27px
+        left: -45px
+        +r($sm)
+          width: 30px
+          height: 30px
+          background-size: contain
+          left: -20px
+          top: -14px
+      &:after
+        transform: rotate(180deg)
+        left: calc(100% - 22px)
+        top: -29px
+        +r($sm)
+          top: -14px
+    
+    &__title
+      background: linear-gradient(160.34deg, #FFE8CC -3.43%, #FFD39D 26.9%, #FFD39D 71.51%, #FFE8CC 104.25%)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      background-clip: text
+      color: transparent
+      text-transform: uppercase
+      font-size: 64px
+      font-weight: 500
+      +r($lg)
+        font-size: 42px
+      +r($sm)
+        font-size: 36px
+    &__text
+      color: #FFE8CC
+      font-size: 32px
+      +r($lg)
+        font-size: 24px
+      +r($sm)
+        font-size: 18px
+
+
+.faq-btn-form
+  text-align: center
+  .faq-btn
+    background: linear-gradient(160.34deg, #FFE8CC -3.43%, #FFD39D 71.5%, #FFD39D 71.51%, #FFE8CC 104.25%)
+    padding: 15px 30px
+    border: none
+    cursor: pointer
+    border-radius: 20px
+    display: inline-block
+    vertical-align: top
+    +r($lg)
+      padding: 16px
+    &:hover
+      background: linear-gradient(160.34deg, #FFD39D -3.43%, #FFD39D 71.5%, #FFD39D 71.51%, #FFD39D 104.25%)
+      
+    &-label
+      background: linear-gradient(180deg, #704107 0%, #2A0B0A 100%)
+      font-size: 25px
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      background-clip: text
+      color: transparent
+      font-family: 'VinqueRg', sans-serif
+      text-transform: uppercase

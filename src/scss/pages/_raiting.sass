@@ -1,0 +1,168 @@
+.page-raiting
+  padding: 130px 0 150px
+  min-height: 100vh
+  position: relative
+  z-index: 1
+  background: url(../img/bg2.png) 50% 50% no-repeat
+  margin-bottom: -100px
+  
+  &:before
+    background: url(../img/paper.png) 50% 0 no-repeat
+    background-size: contain
+    position: absolute
+    top: -300px
+    width: 100%
+    content: ""
+    min-height: 2600px
+    height: calc(100% + 600px)
+    z-index: -1
+    +r($lg)
+      background-size:  140% auto !important
+      background: url(../img/pepper2.png) 50% 0% repeat-y
+ 
+.raiting
+  &__header
+    margin-bottom: 20px
+  &__filter
+    margin: 0
+    padding: 0
+    list-style: none
+    display: flex
+    gap: 20px
+    justify-content: space-between
+    +r($lg)
+      flex-wrap: wrap
+    &-item
+      display: block
+      flex: 1 1 auto
+      &__link
+        background: linear-gradient(160.34deg, #FFE8CC -3.43%, #FFD39D 71.5%, #FFD39D 71.51%, #FFE8CC 104.25%)
+        padding: 18px
+        border: none
+        cursor: pointer
+        border-radius: 20px
+        display: block
+        text-align: center
+        +r($xxl)
+          padding: 12px 5px
+        &:hover
+          background: linear-gradient(160.34deg, #FFD39D -3.43%, #FFD39D 71.5%, #FFD39D 71.51%, #FFD39D 104.25%)
+        
+        span
+          background: linear-gradient(180deg, #6E5B43 0%, #08051E 100%)
+          font-size: 20px
+          -webkit-background-clip: text
+          -webkit-text-fill-color: transparent
+          background-clip: text
+          color: transparent
+          font-family: 'VinqueRg', sans-serif
+          text-transform: uppercase
+          margin-right: 5px
+          +r($xl)
+            font-size: 18px
+          +r($sm)
+            font-size: 16px
+
+  &__content
+    background: linear-gradient(160.34deg, #FFE8CC -3.43%, #FFD39D 26.9%, #FFD39D 71.51%, #FFE8CC 104.25%)
+    padding: 55px 45px
+    border-radius: 70px
+    +r($xxl)
+      border-radius: 36px
+      padding: 40px 30px
+  &__options
+    font-size: 26px
+    font-weight: 500
+    color: #0F0201
+    margin-bottom: 30px
+    &-item
+      display: inline-block
+      vertical-align: top
+      text-decoration: underline
+      cursor: pointer
+      &:hover
+        text-decoration: none
+      .arr
+        display: inline-block
+        vertical-align: top
+        margin-left: 5px
+        padding-top: 4px
+
+  &__table
+    display: table
+    width: 100%
+    color: #704107
+    font-size: 15px
+    margin-bottom: 30px
+    
+    +r($sm)
+      display: block
+      margin-left: -12px
+      margin-right: -12px
+      font-size: 18px
+    &-row
+      display: table-row
+      +r($sm)
+        display: flex
+        flex-direction: column
+        border-top: 1px solid #976C38
+        border-bottom: 1px solid #976C38
+        position: relative
+        padding-left: 18px
+      &.--th
+        font-weight: 500
+        background: #FFE8CC
+        font-size: 18px
+        +r($sm)
+          display: none
+        .raiting__table-td
+          border-top: 1px solid #976C38
+          border-bottom: 1px solid #976C38
+          +r($sm)
+            border: none
+          &:first-child
+            padding-left: 16px
+    &-td
+      display: table-cell
+      padding: 18px 16px
+      font-weight: 500
+      border-bottom: 1px solid #976C38
+      +r($xxl)
+        padding: 12px
+      +r($sm)
+        border: none
+        display: flex
+        gap: 12px
+      &:first-child
+        font-weight: 400
+        padding-left: 6px
+        +r($sm)
+          padding-left: 12px
+      .first-td
+        display: flex
+        align-items: center
+        +r($sm)
+          gap: 12px
+      &__label
+        display: none
+        font-weight: 500
+        +r($sm)
+          display: block
+          min-width: 80px
+      &__num
+        color: #000000
+        font-size: 18px
+        font-weight: 500
+        min-width: 44px
+        max-width: 44px
+        display: flex
+        align-items: center
+        justify-content: center
+        +r($sm)
+          min-width: 24px
+          max-width: 24px
+          justify-content: flex-start
+          position: absolute
+          top: 12px
+          left: 0
+        

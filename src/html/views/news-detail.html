@@ -1,0 +1,69 @@
+<%
+var data = {
+title: "Заголовок сайта",
+copyright: "itJustAlance",
+bodyClass: ""
+};
+
+<!--var mobileFooter = _.template(require('../includes/mobile-footer.html'))(data);-->
+<!--var mobileMenu = _.template(require('../includes/mobile-menu.html'))(data);-->
+
+<!--var footerHtml = _.template(require('../includes/footer.html'))({-->
+<!--...data,-->
+<!--mobileFooter,-->
+<!--mobileMenu-->
+<!--});-->
+
+
+%>
+<%= _.template(require('../includes/header.html'))(data) %>
+
+<div class="container">
+  <section class="news-detail">
+    <div class="all">
+      <div class="news-detail-content">
+        <div class="news-detail__header">
+          <ul class="labesls">
+            <li class="label-item">18 декабря 2025</li>
+            <li class="label-item">Новости</li>
+            <li class="label-item">Администрация Ethereal Portal</li>
+          </ul>
+          <h1 class="news-detail-title">Открытие нового данжа «Проклятый Лабиринт»</h1>
+        </div>
+        <div class="news-detail-image">
+          <div class="img"><img src="img/img-news.png" alt=""></div>
+          <div class="img-label">Lorem Ipsum is simply dummy text of the printing </div>
+        </div>
+        <article class="news-detail-body article">
+          <h2>Новый вызов для самых смелых</h2>
+          <p>В мире Britannia открылся новый опасный данж — «Проклятый Лабиринт». Это высокоуровневая PvE-локация, созданная специально для опытных игроков, готовых проверить свои билды, тактику и слаженность команды.</p>
+          
+          <p>Лабиринт меняется при каждом заходе: коридоры, ловушки и комнаты
+            с монстрами генерируются динамически, а значит — ни одно прохождение
+            не будет одинаковым.</p>
+          <h2>Что ждёт внутри?</h2>
+          <p>Внутри «Проклятого Лабиринта» вас ожидают:</p>
+          <ul>
+            <li>Новые элитные монстры с уникальными способностями</li>
+            <li>Ловушки и загадки, требующие командного взаимодействия</li>
+            <li>Мини-боссы, охраняющие ключевые зоны</li>
+            <li>Финальный босс — The Cursed Warden</li>
+          </ul>
+          <p>Босс использует несколько фаз боя, накладывает проклятия и адаптируется к стилю игры группы.</p>
+          
+          <h2>Полезные ссылки</h2>
+          <p><a href="#">[Как попасть в данж]</a></p>
+          
+          <p><a href="#">[Гайды по PvE]</a></p>
+          
+          <p><a href="#">[Наш Discord]</a></p>
+        </article>
+      </div><!--end news-detail-content -->
+    </div><!--end all -->
+  </section>
+ 
+  
+</div>
+
+
+<%= _.template(require('../includes/footer.html'))(data) %>
